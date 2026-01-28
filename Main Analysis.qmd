@@ -1,0 +1,20 @@
+---
+title: "Main Analysis"
+author: "Somtoo"
+format: html
+editor: visual
+---
+
+<!-- #run code only once to download the data -->
+
+```{r}
+stroop_data <- read.table(
+  "https://raw.githubusercontent.com/Lakens/Stroop/master/stroop.txt",
+  header = TRUE,
+  sep = ",")
+
+write.table(stroop_data, file = "stroop.csv",quote = FALSE, row.names = FALSE, sep = ",")
+stroop_data <- read.csv("stroop.csv", header = TRUE)
+
+
+```
